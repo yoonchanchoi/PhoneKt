@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/noteFragment"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".note.NoteFragment">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="30sp"
+        android:text="note"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        />
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar_not"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        app:contentInsetStart="0dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:title="노트"
+        app:titleMarginStart="30dp"
+        app:titleTextColor="#555555"
+        android:background="#75C37D58"
+        >
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="right"
+            >
+
+            <androidx.appcompat.widget.SearchView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:searchIcon="@drawable/ic_baseline_search_24"
+                app:closeIcon="@drawable/ic_baseline_clear_24"
+                app:iconifiedByDefault="true"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:queryBackground="@drawable/searchview_background"
+                app:queryHint="검색어를 입력하시오"
+                />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.appcompat.widget.Toolbar>
+
+    <EditText
+        android:id="@+id/ed_title"
+        android:hint="제목을 입력하세요"
+        android:layout_width="350dp"
+        android:layout_height="45dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolbar_not"
+        app:layout_constraintEnd_toStartOf="@id/btn_creat"
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_creat"
+        android:layout_width="50dp"
+        android:layout_height="44dp"
+        app:layout_constraintStart_toEndOf="@id/ed_title"
+        app:layout_constraintTop_toBottomOf="@id/toolbar_not"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:text="생성"
+        android:textColor="#FFFFFF"
+        android:layout_marginTop="1dp"
+        android:background="@drawable/btn_create_style"
+    />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_note"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolbar_not"
+
+        />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
