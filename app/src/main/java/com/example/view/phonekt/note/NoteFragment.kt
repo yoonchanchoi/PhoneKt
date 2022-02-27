@@ -20,18 +20,23 @@ import com.example.view.phonekt.databinding.FragmentNoteBinding
 class NoteFragment : Fragment() {
 
     private var nfBinding: FragmentNoteBinding?= null
+    lateinit var db: NoteDatabase
+    var noteList : ArrayList<NoteEntity> = arrayListOf<NoteEntity>()
+
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
+//        val noteList = arrayListOf(
+//            NoteModel("title1","내용1","2022-02-21"),
+//            NoteModel("제목2","내용2","2022-02-22"),
+//            NoteModel("제목3","내용3","2022-02-23"),
+//            NoteModel("제목4","내용4","2022-02-24"),
+//            NoteModel("제목5","내용5","2022-02-25"),
+//            NoteModel("제목6","내용6","2022-02-26"),
+//            NoteModel("제목7","내용7","2022-02-27")
+//        )
 
-        val noteList = arrayListOf(
-            NoteModel("title1","내용1","2022-02-21"),
-            NoteModel("제목2","내용2","2022-02-22"),
-            NoteModel("제목3","내용3","2022-02-23"),
-            NoteModel("제목4","내용4","2022-02-24"),
-            NoteModel("제목5","내용5","2022-02-25"),
-            NoteModel("제목6","내용6","2022-02-26"),
-            NoteModel("제목7","내용7","2022-02-27")
-        )
+        db = NoteDatabase.getInstance(this)!!
+
 
         val binding = FragmentNoteBinding.inflate(inflater,container, false)
 

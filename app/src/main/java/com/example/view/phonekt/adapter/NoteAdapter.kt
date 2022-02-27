@@ -6,9 +6,10 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.view.phonekt.R
+import com.example.view.phonekt.note.NoteEntity
 import com.example.view.phonekt.note.NoteModel
 
-class NoteAdapter(val noteList: ArrayList<NoteModel>) : RecyclerView.Adapter<NoteAdapter.CustomViewHolder>() {
+class NoteAdapter(val noteList: ArrayList<NoteEntity>) : RecyclerView.Adapter<NoteAdapter.CustomViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CustomViewHolder {
         val view = LayoutInflater.from(parent.context).inflate(R.layout.note_item,parent,false)

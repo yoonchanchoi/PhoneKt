@@ -10,7 +10,8 @@
     <!--버튼이 안눌린 상태-->
     <item android:state_pressed="false">
         <shape>
-            <solid android:color="#DD956E"/>
+            <solid android:color="#646464"/>
+<!--            <solid android:color="#DD956E"/>-->
             <corners android:radius="8dp"/>
         </shape>
     </item>
