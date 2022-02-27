@@ -42,7 +42,15 @@ class NoteFragment : Fragment() {
 
         nfBinding?.rvNote?.adapter = NoteAdapter(noteList)
 
+
+        nfBinding?.btnCreat?.setOnClickListener{
+            val test:String
+        }
+
+
         return nfBinding?.root
+
+
 
     }
 
